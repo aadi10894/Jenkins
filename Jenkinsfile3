@@ -4,7 +4,7 @@
 
 pipeline{
 
-      agent {label 'Agent_2_Windows'
+      agent {any
                 
             }
         
