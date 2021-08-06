@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-@Library('shared-library@main') 
+@Library('Shared_Library@main') 
 
 pipeline{
 
