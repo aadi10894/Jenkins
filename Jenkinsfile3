@@ -4,7 +4,7 @@
 
 pipeline{
 
-      agent {label 'Agent1_CentOS'
+      agent {label 'Agent_1_CentOS'
                 
             }
         
