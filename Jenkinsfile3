@@ -2,27 +2,23 @@
 
 @Library('Shared_Library@main') _ //master or whatever branch
 
-pipeline{
-
-      agent {
-                
+pipeline {
+    agent {label 'Agent_2_Windows'} 
+    stages {
+        stage('---clean---') { 
+            steps {
+                bat "mvn clean"
             }
-        
-        stages{
-
-              stage('maven build'){
-                  steps{
-                      script{
-		    	                bat "mvn clean install"
-                      	  }
-               	     }  
-                 }	
-                 
-                 stage ('Check logs') {
-                    steps {
-                        filterLogs ('WARNING', 5)
-                    }
-                }
-		
-           }	       	     	         
+        }
+        stage('--test--') { 
+            steps {
+                bat "mvn test" 
+            }
+        }
+        stage('--package--') { 
+            steps {
+                bat "mvn package" 
+            }
+        }
+    }
 }
