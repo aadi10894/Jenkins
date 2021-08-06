@@ -1,9 +1,9 @@
 #!/usr/bin/env groovy
 
-@Library('Shared_Library@main') 
+@Library('Shared_Library@main') _
 
 pipeline{
-      	agent {label 'Agent_2_Windows'}
+      	agent 
 	{
                 docker {
                 image 'maven:3-openjdk-11'
