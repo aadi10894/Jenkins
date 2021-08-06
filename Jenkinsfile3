@@ -1,9 +1,10 @@
 #!/usr/bin/env groovy
 
-@Library('Shared_Library@main') _
+@Library('Shared_Library@main') _ //master or whatever branch
 
 pipeline{
-      	agent {label 'Agent1_centOS'
+
+      agent {
                 docker {
                 image 'maven:3-openjdk-11'
                 args '-v $HOME/.m2:/root/.m2'
