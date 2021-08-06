@@ -3,8 +3,7 @@
 @Library('Shared_Library@main') _
 
 pipeline{
-      	agent any
-	{
+      	agent any{
                 docker {
                 image 'maven:3-openjdk-11'
                 args '-v $HOME/.m2:/root/.m2'
